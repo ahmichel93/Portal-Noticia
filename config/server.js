@@ -8,6 +8,7 @@ app.set('views', './app/views');
 consign()
     .include('app/router')
     .then('config/dbConnection.js')
+    .then('app/models')
     .into(app);
 
 module.exports = app;
