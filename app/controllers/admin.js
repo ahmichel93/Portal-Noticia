@@ -6,11 +6,11 @@ module.exports.formulario_inclusao_noticia = function(app, req, res){
 module.exports.noticias_salvar = function(app, req, res){
   var noticia = req.body;
 
-  
+
   req.assert('titulo','Título é obrigatorio').notEmpty();
   req.assert('resumo','Resumo é obrigatorio').notEmpty();
   req.assert('resumo','Resumo deve conter entre 05 e 100 caracteres').len(5, 100);
-  req.assert('Autor','Autor é obrigatorio').notEmpty();
+  req.assert('autor','Autor é obrigatorio').notEmpty();
   req.assert('data_noticia','Data é obrigatorio').notEmpty().isDate({format: 'YYYY-MM-DD'});
   req.assert('noticia','Noticia é obrigatorio').notEmpty();
 
